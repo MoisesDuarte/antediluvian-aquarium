@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
 
 :root {
-  --width: 720px;
+  --width: 1204px;
   --font-main: 'Fira Code', monospace;
   --font-secondary: 'Fira Code', monospace;
   --font-scale: 1em;
@@ -66,8 +66,19 @@ b {
 }
 
 button {
+  border: 1px solid var(--heading-color);
+  background-color: var(--background-color);
+  color: var(--heading-color);
   margin: 0;
+  padding: 6px 10px;
   cursor: pointer;
+  font-family: var(--font-secondary);
+  font-size: var(--font-scale);
+}
+
+button:hover {
+  background-color: var(--heading-color);
+  color: var(--background-color);
 }
 
 main {
@@ -122,6 +133,7 @@ footer {
   color: var(--background-color);
   display: inline-block;
   font-weight: 400;
+  margin: 0;
 }
 
 .inline {
