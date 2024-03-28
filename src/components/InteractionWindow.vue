@@ -1,14 +1,25 @@
 <template>
   <section>
-    <label class="title">
-      <h1>What should I do?</h1>
-    </label>
-
     <ul>
-      <li>Move</li>
-      <li>Look</li>
-      <li>Interact</li>
-      <li>Speak</li>
+      <li>
+        <i class="ri-walk-line"></i>
+        Move
+      </li>
+
+      <li>
+        <i class="ri-eye-fill"></i>
+        Look
+      </li>
+
+      <li>
+        <i class="ri-hand-coin-fill"></i>
+        Use
+      </li>
+
+      <li>
+        <i class="ri-speak-fill"></i>
+        Speak
+      </li>
     </ul>
   </section>
 </template>
@@ -26,6 +37,12 @@ ul {
   margin: 0;
   padding: 0;
   margin-top: 12px;
+}
+
+ul > li {
+  margin-bottom: 4px;
+  padding-left: 6px;
+  user-select: none;
 }
 
 ul > li:hover {

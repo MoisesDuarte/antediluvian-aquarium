@@ -1,7 +1,10 @@
 <template>
   <section>
     <article class="title">
-      <h1>Ilia Lafayette</h1>
+      <h1>
+        <i class="ri-user-fill"></i>
+        Ilia Lafayette
+      </h1>
     </article>
 
     <article class="dialog">
