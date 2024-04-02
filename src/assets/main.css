@@ -24,34 +24,10 @@ body {
   color: var(--primary-color);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-main);
-  color: var(--primary-color);
-}
-
-a {
-  color: var(--primary-color);
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 main {
   padding: 30px;
   border: 1px solid var(--primary-color);
-}
-
-strong,
-b {
-  color: var(--primary-color);
+  line-height: 1.6;
 }
 
 button {
@@ -70,15 +46,7 @@ button:hover {
   color: var(--background-color);
 }
 
-main {
-  line-height: 1.6;
-}
-
-img {
-  max-width: 100%;
-}
-
-.title h1 {
+.title {
   font-size: 1em;
   padding: 5px 10px;
   background: var(--primary-color);

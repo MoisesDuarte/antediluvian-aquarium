@@ -2,17 +2,13 @@
   <section>
     <header>
       <div class="title">
-        <h1>
-          <i class="ri-map-pin-2-fill"></i>
-          Chrysanthemum Street
-        </h1>
+        <i class="ri-map-pin-2-fill"></i>
+        Chrysanthemum Street
       </div>
 
       <div class="title">
-        <h1>
-          14:23
-          <i class="ri-time-fill"></i>
-        </h1>
+        14:23
+        <i class="ri-time-fill"></i>
       </div>
     </header>
   </section>

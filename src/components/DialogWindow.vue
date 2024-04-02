@@ -1,10 +1,8 @@
 <template>
   <section>
     <article class="title">
-      <h1>
-        <i class="ri-user-fill"></i>
-        Ilia Lafayette
-      </h1>
+      <i class="ri-user-fill"></i>
+      Ilia Lafayette
     </article>
 
     <article class="dialog">
