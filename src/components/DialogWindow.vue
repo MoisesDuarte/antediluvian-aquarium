@@ -22,7 +22,7 @@
 section {
   position: relative;
   grid-column: span 2;
-  border-top: 1px solid var(--link-color);
+  border-top: 1px solid var(--primary-color);
   margin-top: 24px;
   padding-top: 24px;
 }

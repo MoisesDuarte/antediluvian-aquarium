@@ -28,7 +28,7 @@
 
 <style scoped>
 section {
-  border-left: 1px solid var(--link-color);
+  border-left: 1px solid var(--primary-color);
   padding-left: 24px;
 }
 
@@ -47,7 +47,7 @@ ul > li {
 
 ul > li:hover {
   cursor: pointer;
-  background-color: var(--heading-color);
+  background-color: var(--primary-color);
   color: var(--background-color);
 }
 </style>

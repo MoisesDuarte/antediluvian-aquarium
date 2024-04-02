@@ -4,15 +4,10 @@
   --width: 1204px;
   --font-main: 'Fira Code', monospace;
   --font-secondary: 'Fira Code', monospace;
-  --font-scale: 1.225rem;
+  --font-scale: 20px;
   --background-color: #222129;
-  --heading-color: #ffa86a;
-  --text-color: #ffa86a;
-  --link-color: #ffa86a;
-  --visited-color: #bc8d6b;
-  --code-background-color: #bc8d6b;
-  --code-color: #222129;
-  --blockquote-color: #222;
+  --primary-color: #ffa86a;
+  --accent-color: #bc8d6b;
 }
 
 body {
@@ -26,7 +21,7 @@ body {
   word-wrap: break-word;
   overflow-wrap: break-word;
   line-height: 1.5;
-  color: var(--text-color);
+  color: var(--primary-color);
 }
 
 h1,
@@ -36,11 +31,11 @@ h4,
 h5,
 h6 {
   font-family: var(--font-main);
-  color: var(--heading-color);
+  color: var(--primary-color);
 }
 
 a {
-  color: var(--link-color);
+  color: var(--primary-color);
   cursor: pointer;
   text-decoration: underline;
 }
@@ -50,25 +45,19 @@ a:hover {
 }
 
 main {
-  margin-top: 40px;
-  margin-bottom: 20px;
   padding: 30px;
-  border: 1px solid var(--link-color);
-}
-
-nav a {
-  margin-right: 8px;
+  border: 1px solid var(--primary-color);
 }
 
 strong,
 b {
-  color: var(--heading-color);
+  color: var(--primary-color);
 }
 
 button {
-  border: 1px solid var(--heading-color);
+  border: 1px solid var(--primary-color);
   background-color: var(--background-color);
-  color: var(--heading-color);
+  color: var(--primary-color);
   margin: 0;
   padding: 6px 10px;
   cursor: pointer;
@@ -77,7 +66,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--heading-color);
+  background-color: var(--primary-color);
   color: var(--background-color);
 }
 
@@ -85,122 +74,16 @@ main {
   line-height: 1.6;
 }
 
-table {
-  width: 100%;
-}
-
-hr {
-  border: 0;
-  border-top: 1px dashed;
-}
-
 img {
   max-width: 100%;
-}
-
-code {
-  font-family: monospace;
-  padding: 2px;
-  background-color: var(--code-background-color);
-  color: var(--code-color);
-  border-radius: 3px;
-}
-
-blockquote {
-  border-top: 1px solid var(--heading-color);
-  border-bottom: 1px solid var(--heading-color);
-  color: var(--text-color);
-  padding: 20px;
-  font-style: italic;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-footer {
-  padding: 25px 0;
-  text-align: center;
-  opacity: 0.6;
-}
-
-.title:hover {
-  text-decoration: none;
 }
 
 .title h1 {
   font-size: 1em;
   padding: 5px 10px;
-  background: var(--heading-color);
+  background: var(--primary-color);
   color: var(--background-color);
   display: inline-block;
   font-weight: 400;
   margin: 0;
-}
-
-.inline {
-  width: auto !important;
-}
-
-.highlight,
-.code {
-  padding: 1px 15px;
-  background-color: var(--code-background-color);
-  color: var(--code-color);
-  border-radius: 3px;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  overflow-x: auto;
-}
-
-.highlight {
-  border-left: 5px solid var(--heading-color);
-}
-
-/* blog post list */
-ul.blog-posts {
-  list-style-type: none;
-  padding: unset;
-}
-
-ul.blog-posts li {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-ul.blog-posts li time {
-  font-style: normal;
-}
-
-ul.blog-posts li span {
-  flex: 0 0 130px;
-}
-
-ul.blog-posts li a:visited {
-  color: var(--visited-color);
-}
-
-table {
-  border-collapse: collapse;
-}
-
-table,
-th,
-td {
-  border: 1px dashed var(--heading-color);
-  padding: 10px;
-}
-
-@media only screen and (max-width: 767px) {
-  main {
-    padding: 20px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-  }
-
-  ul.blog-posts li {
-    flex-direction: column;
-  }
-
-  ul.blog-posts li span {
-    flex: unset;
-  }
 }
