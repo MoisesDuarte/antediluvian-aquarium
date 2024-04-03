@@ -3,18 +3,17 @@
     <header>
       <div class="title">
         <i class="ri-map-pin-2-fill"></i>
-        Chrysanthemum Street
-      </div>
-
-      <div class="title">
-        14:23
-        <i class="ri-time-fill"></i>
+        {{ name }}
       </div>
     </header>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useScene } from '@/composables/scene.composable'
+
+const { name } = useScene()
+</script>
 
 <style scoped>
 header {

@@ -3,22 +3,22 @@
     <ul>
       <li>
         <i class="ri-walk-line"></i>
-        Move
+        Mover
       </li>
 
       <li>
         <i class="ri-eye-fill"></i>
-        Look
+        Olhar
       </li>
 
       <li>
         <i class="ri-hand-coin-fill"></i>
-        Use
+        Usar
       </li>
 
       <li>
         <i class="ri-speak-fill"></i>
-        Speak
+        Falar
       </li>
     </ul>
   </section>

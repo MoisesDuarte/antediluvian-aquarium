@@ -2,19 +2,22 @@
   <section>
     <article class="title">
       <i class="ri-user-fill"></i>
-      Ilia Lafayette
+      Consciência
     </article>
 
     <article class="dialog">
-      I hate these streets. I wish they would stop growing...<br />
-      It's been a while since I've been out at night like this, now that I think about it.
+      {{ description }}
     </article>
 
     <button class="advance-dialog-button">Next ></button>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useScene } from '@/composables/scene.composable'
+
+const { description } = useScene()
+</script>
 
 <style scoped>
 section {
