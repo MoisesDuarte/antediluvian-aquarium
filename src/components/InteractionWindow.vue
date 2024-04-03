@@ -1,30 +1,55 @@
 <template>
   <section>
-    <ul>
-      <li>
-        <i class="ri-walk-line"></i>
-        Mover
+    <ul v-if="!currentActionOptions">
+      <li v-for="{ id, icon, label } in actionsList" :key="id" @click="currentAction = id">
+        <i :class="icon"></i>
+        {{ label }}
       </li>
+    </ul>
 
-      <li>
-        <i class="ri-eye-fill"></i>
-        Olhar
+    <ul v-if="currentActionOptions">
+      <li v-for="{ id, name, icon } in currentActionOptions" :key="id">
+        <i :class="icon"></i>
+        {{ name }}
       </li>
-
-      <li>
-        <i class="ri-hand-coin-fill"></i>
-        Usar
-      </li>
-
-      <li>
-        <i class="ri-speak-fill"></i>
-        Falar
+      <li @click="currentAction = undefined">
+        <i class="ri-arrow-go-back-line"></i>
+        Voltar
       </li>
     </ul>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { EAction, useScene } from '@/composables/scene.composable'
+
+const {
+  state: { currentAction, currentActionOptions }
+} = useScene()
+
+const actionsList = [
+  {
+    id: EAction.MOVE,
+    icon: 'ri-walk-line',
+    label: 'Mover'
+  },
+  {
+    id: EAction.SEE,
+    icon: 'ri-eye-fill',
+    label: 'Olhar'
+  },
+  {
+    id: EAction.SPEAK,
+    icon: 'ri-speak-fill',
+    label: 'Falar'
+  },
+  {
+    id: EAction.USE,
+    icon: 'ri-hand-coin-fill',
+    label: 'Usar'
+  }
+]
+</script>
 
 <style scoped>
 section {

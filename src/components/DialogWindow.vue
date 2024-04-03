@@ -9,7 +9,7 @@
       {{ description }}
     </article>
 
-    <button class="advance-dialog-button">Next ></button>
+    <button class="advance-dialog-button">Próximo ></button>
   </section>
 </template>
 
@@ -30,6 +30,7 @@ section {
 
 article.dialog {
   margin-top: 14px;
+  white-space: pre-line;
 }
 
 button.advance-dialog-button {
