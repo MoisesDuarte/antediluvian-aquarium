@@ -25,7 +25,5 @@ section {
   position: relative;
   background-size: cover;
   margin-right: 14px;
-  filter: blur(5px);
-  animation: blur 1s forwards;
 }
 </style>

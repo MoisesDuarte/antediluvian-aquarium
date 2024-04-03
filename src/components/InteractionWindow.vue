@@ -8,10 +8,12 @@
     </ul>
 
     <ul v-if="currentActionOptions">
-      <li v-for="{ id, name, icon } in currentActionOptions" :key="id">
+      <li v-for="{ id, name, icon, description } in currentActionOptions" :key="id">
         <i :class="icon"></i>
         {{ name }}
+        <div class="tooltip">{{ description }}</div>
       </li>
+
       <li @click="currentAction = undefined">
         <i class="ri-arrow-go-back-line"></i>
         Voltar
@@ -65,6 +67,7 @@ ul {
 }
 
 ul > li {
+  position: relative;
   margin-bottom: 4px;
   padding-left: 6px;
   user-select: none;
@@ -74,5 +77,23 @@ ul > li:hover {
   cursor: pointer;
   background-color: var(--primary-color);
   color: var(--background-color);
+}
+
+ul > li > .tooltip {
+  border: 1px solid var(--primary-color);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  padding: 6px;
+  font-size: 14px;
+  top: 0;
+  left: -300px;
+  width: 250px;
+}
+
+ul > li:hover .tooltip {
+  visibility: visible;
 }
 </style>
