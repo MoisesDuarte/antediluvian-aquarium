@@ -21,6 +21,7 @@ export type TSceneActorItem = Omit<TSceneActionItem, 'description'> & {
 
 export const useScene = createSharedComposable(function () {
   const name = 'Rua Crisântemo';
+  const background = 'src/assets/backgrounds/street-at-night.jpg';
 
   const ACTIONS_DICT: Record<EAction, TSceneActionItem[]> = {
     [EAction.MOVE]: [{
@@ -71,6 +72,7 @@ export const useScene = createSharedComposable(function () {
 
   return {
     name,
+    background,
     state: {
       currentAction,
       currentActionOptions,

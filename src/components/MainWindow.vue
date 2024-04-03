@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section :style="{ 'background-image': `url(${background})` }">
     <header>
       <div class="title">
         <i class="ri-map-pin-2-fill"></i>
@@ -12,7 +12,7 @@
 <script setup lang="ts">
 import { useScene } from '@/composables/scene.composable'
 
-const { name } = useScene()
+const { name, background } = useScene()
 </script>
 
 <style scoped>
@@ -22,7 +22,6 @@ header {
 }
 
 section {
-  background-image: url('../assets/backgrounds/street-at-night.jpg');
   background-size: cover;
   margin-right: 14px;
 }
