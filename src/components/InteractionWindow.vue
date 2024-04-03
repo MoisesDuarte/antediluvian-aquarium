@@ -11,7 +11,9 @@
       <li v-for="{ id, name, icon, description } in currentActionOptions" :key="id">
         <i :class="icon"></i>
         {{ name }}
-        <div class="tooltip">{{ description }}</div>
+        <div class="tooltip">
+          {{ description }}
+        </div>
       </li>
 
       <li @click="currentAction = undefined">
@@ -86,11 +88,11 @@ ul > li > .tooltip {
   position: absolute;
   z-index: 1;
   visibility: hidden;
-  padding: 6px;
-  font-size: 14px;
+  padding: 8px 12px;
+  font-size: 16px;
   top: 0;
-  left: -300px;
-  width: 250px;
+  left: -560px;
+  width: 500px;
 }
 
 ul > li:hover .tooltip {
