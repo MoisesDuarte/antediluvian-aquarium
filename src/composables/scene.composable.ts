@@ -1,5 +1,5 @@
 import { createSharedComposable } from "@vueuse/core";
-import { computed, ref, type ComputedRef, type Ref } from "vue";
+import { computed, ref } from "vue";
 
 export enum EAction {
   MOVE = 'MOVE',
@@ -15,9 +15,12 @@ export type TSceneActionItem = {
   description: string;
 }
 
+export type TSceneActorItem = Omit<TSceneActionItem, 'description'> & {
+  lines: string[];
+}
+
 export const useScene = createSharedComposable(function () {
   const name = 'Rua Crisântemo';
-  const description = 'Ruas se desgarram do núcleo, como galhos de árvore partidos por vendavais repentinos. Essa é uma destas ruas, planando sobre um espaço avulso em um vácuo indivisível de escuridão. Congelada no tempo, banhada pela luz alaranjada dos postes de luz, que avança receosa em direção a escuridão.';
 
   const ACTIONS_DICT: Record<EAction, TSceneActionItem[]> = {
     [EAction.MOVE]: [{
@@ -49,18 +52,30 @@ export const useScene = createSharedComposable(function () {
       icon: 'ri-information-line',
       description: 'placeholder'
     }]
-  }
+  };
 
+  const ACTORS_DICT: Record<string, TSceneActorItem> = {
+    'DEFAULT': {
+      id: 'conscience',
+      name: 'Consciência',
+      icon: 'ri-brain-fill',
+      lines: ['Ruas se desgarram do núcleo, como galhos de árvore partidos por vendavais repentinos. Essa é uma destas ruas, planando sobre um espaço avulso em um ponto neutro entre existência e inexistência. Congelada no tempo, banhada pela luz alaranjada dos postes de luz, que avança receosa em direção a escuridão.']
+    }
+  }
 
   const currentAction = ref<EAction>();
   const currentActionOptions = computed(() => (currentAction.value ? ACTIONS_DICT[currentAction.value] : undefined));
 
+  const currentActor = ref('DEFAULT');
+  const currentActorDetails = computed(() => (currentActor.value ? ACTORS_DICT[currentActor.value] : undefined));
+
   return {
     name,
-    description,
     state: {
       currentAction,
-      currentActionOptions
+      currentActionOptions,
+      currentActor,
+      currentActorDetails,
     }
   }
 })
