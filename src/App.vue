@@ -17,5 +17,6 @@ import DialogWindow from './components/DialogWindow.vue'
   display: grid;
   grid-template-columns: 80% 20%;
   grid-template-rows: 468px 300px;
+  animation: blur 1s;
 }
 </style>

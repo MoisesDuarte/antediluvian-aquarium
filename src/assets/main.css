@@ -55,3 +55,12 @@ button:hover {
   font-weight: 400;
   margin: 0;
 }
+
+@keyframes blur {
+  0% {
+    filter: blur(5px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
