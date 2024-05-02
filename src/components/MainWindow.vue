@@ -6,6 +6,9 @@
         {{ name }}
       </div>
     </header>
+
+    <div class="crt-noise" />
+    <div class="crt-overlay" />
   </section>
 </template>
 
@@ -19,6 +22,10 @@ const { name, background } = useScene()
 header {
   display: flex;
   justify-content: space-between;
+}
+
+header>.title {
+  z-index: 2;
 }
 
 section {
