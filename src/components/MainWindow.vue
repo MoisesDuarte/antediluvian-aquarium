@@ -29,8 +29,8 @@ header>.title {
 }
 
 section {
+  border: 1px solid var(--primary-color);
   position: relative;
   background-size: cover;
-  margin-right: 14px;
 }
 </style>

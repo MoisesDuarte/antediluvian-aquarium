@@ -30,9 +30,7 @@ const lines = computed(() => currentActorDetails.value?.lines || [])
 section {
   position: relative;
   grid-column: span 2;
-  border-top: 1px solid var(--primary-color);
   margin-top: 24px;
-  padding-top: 24px;
 }
 
 article.dialog {

@@ -57,8 +57,8 @@ const actionsList = [
 
 <style scoped>
 section {
-  border-left: 1px solid var(--primary-color);
   padding-left: 24px;
+  border-bottom: 1px solid var(--primary-color);
 }
 
 ul {
@@ -68,20 +68,20 @@ ul {
   margin-top: 12px;
 }
 
-ul > li {
+ul>li {
   position: relative;
   margin-bottom: 4px;
   padding-left: 6px;
   user-select: none;
 }
 
-ul > li:hover {
+ul>li:hover {
   cursor: pointer;
   background-color: var(--primary-color);
   color: var(--background-color);
 }
 
-ul > li > .tooltip {
+ul>li>.tooltip {
   border: 1px solid var(--primary-color);
   background-color: var(--background-color);
   color: var(--primary-color);
@@ -95,7 +95,7 @@ ul > li > .tooltip {
   width: 500px;
 }
 
-ul > li:hover .tooltip {
+ul>li:hover .tooltip {
   visibility: visible;
 }
 </style>
